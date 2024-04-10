@@ -6,15 +6,14 @@ public class Salarie extends Intervenant {
 	protected double salaryPerDay;
 	protected int numberOfDays;
 
-	public Salarie(String lastName, String firstName, double salarySalarie,
-			double salaryPerDay,int numberOfDays) {
+	public Salarie(String lastName, String firstName, double salarySalarie, double salaryPerDay, int numberOfDays) {
 		super(lastName, firstName);
 		this.salarySalarie = salarySalarie;
 		this.salaryPerDay = salaryPerDay;
-	    this.numberOfDays = numberOfDays;
-		
+		this.numberOfDays = numberOfDays;
+
 	}
-	
+
 	public double getSalaire() {
 		double res = numberOfDays * salaryPerDay;
 		return res;

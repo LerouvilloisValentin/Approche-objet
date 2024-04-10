@@ -9,9 +9,9 @@ public class Pigiste extends Salarie {
 		super(lastName, firstName, salarySalarie, salaryPerDay, numberOfDays);
 
 	}
-
+	
 	public double getSalaire() {
-		double res = numberOfDays * salaryPerDay;
+		double res = super.getNumberOfDays() * super.getSalaryPerDay();
 		return res;
 	}
 
