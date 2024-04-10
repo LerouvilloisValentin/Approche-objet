@@ -6,18 +6,16 @@ import fr.diginamic.formes.Rectangle;
 
 public class TestForme {
 
-    public static void main(String[] args) {
-      
-        Cercle cercle = new Cercle(2);
-        Rectangle rectangle = new Rectangle(3, 4);
-        Carre carre = new Carre(5);
+	public static void main(String[] args) {
 
-        
-       
-        AffichageForme.display(cercle);
-    
-        AffichageForme.display(rectangle);
- 
-        AffichageForme.display(carre);
-    }
+		Cercle cercle = new Cercle(2);
+		Rectangle rectangle = new Rectangle(3, 4);
+		Carre carre = new Carre(5);
+
+		AffichageForme.display(cercle);
+
+		AffichageForme.display(rectangle);
+
+		AffichageForme.display(carre);
+	}
 }

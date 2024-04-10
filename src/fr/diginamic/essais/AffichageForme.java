@@ -16,8 +16,8 @@ public class AffichageForme {
 	public static void main(String[] args) {
 		Cercle cercle = new Cercle(2);
 		Carre carre = new Carre(2);
-		Rectangle rectangle = new Rectangle(2,2);
-		
+		Rectangle rectangle = new Rectangle(2, 2);
+
 		display(cercle);
 	}
 
