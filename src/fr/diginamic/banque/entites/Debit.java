@@ -16,10 +16,6 @@ public class Debit extends Operation {
 		return result;
 	}
 
-	@Override
-	public String toString() {
-		return "Date opération = " + getDate()+ ", montant = " + getMontant();
-	}
 	
 	public String getType() {
 		return "DEBIT";

@@ -25,11 +25,6 @@ public class Credit extends Operation {
 		return credit1;
 	}
 
-	@Override
-	public String toString() {
-		return "Date opération = " + getDate() + ", montant = " + getMontant();
-	}
-
 	public void setcredit1(int credit1) {
 		this.credit1 = credit1;
 	}

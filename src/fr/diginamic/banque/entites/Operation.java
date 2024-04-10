@@ -3,17 +3,17 @@ package fr.diginamic.banque.entites;
 public abstract class Operation {
 	private String date;
 	private int montant;
-	
-	public Operation(String date, int montant){
+
+	public Operation(String date, int montant) {
 		super();
-		this.date= date;
-		this.montant=montant;
+		this.date = date;
+		this.montant = montant;
 	}
-	 public abstract String getType();
-	
-	@Override
+
+	public abstract String getType();
+
 	public String toString() {
-		return "Operation [date=" + date + ", montant=" + montant;
+		return "Date opération = " + getDate() + ", montant = " + getMontant();
 	}
 
 	public String getDate() {
