@@ -9,13 +9,13 @@ public class Theatre {
 	private double priceOnePlace;
 	private int newCustomer;
 
-	public static double subscribe(int capacity,int numberCustomer, double priceOnePlace, int newCustomer) {
-		
-		double actualRecipes = numberCustomer* priceOnePlace;
-		if(capacity >= numberCustomer) {
-			newCustomer+=1;
-			actualRecipes+=newCustomer * priceOnePlace;
-		}else if(numberCustomer == capacity) {
+	public static double subscribe(int capacity, int numberCustomer, double priceOnePlace, int newCustomer) {
+
+		double actualRecipes = numberCustomer * priceOnePlace;
+		if (capacity >= numberCustomer) {
+			newCustomer += 1;
+			actualRecipes += newCustomer * priceOnePlace;
+		} else if (numberCustomer == capacity) {
 			System.out.println("Plus de place");
 		}
 		return actualRecipes;
@@ -77,4 +77,3 @@ public class Theatre {
 		this.newCustomer = newCustomer;
 	}
 }
-
