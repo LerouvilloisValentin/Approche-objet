@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import listes.TestVilles;
@@ -15,10 +17,9 @@ public class LectureFichier {
 		Path path = Paths.get("C:/code/java/ApprocheObject/recensement.csv");
 		List<String> liste = Files.readAllLines(path);
 		ArrayList<Ville> villes = new ArrayList<Ville>();
-
+		System.out.println(villes);
 		liste.remove(0);
-		 for (int i = 0; i < 25000 ; i++) {
-	            String ligne = liste.get(i);
+		 for (String ligne : liste) {
 			String[] tokens = ligne.split(";");
 			String name = tokens[6];
 			String codeDepartment = tokens[2];
@@ -26,18 +27,27 @@ public class LectureFichier {
 			String population = tokens[9].trim().replaceAll(" ", "");
 			int popTot = Integer.parseInt(population);
 			
-			Ville ville = new Ville(name, codeDepartment, nameRegion, popTot);
-			villes.add(ville);
-
+			if(popTot > 25000) {
+				Ville ville = new Ville(name, codeDepartment, nameRegion,popTot);
+				villes.add(ville);
+			}
 		}
+		 
+		 Collections.sort(villes);
+		 for(Ville ville : villes) {
+			 System.out.println(ville);
+		 }
 
-	        Path pathDest = Paths.get("C:/code/java/ApprocheObject/recensement-new.csv");
-	        List<String> listeVilles = new ArrayList<>();
-	        for (Ville ville : villes) {
-	            String csvLine = ville.toString(); // Assuming you have a method toCsvString() in Ville class
-	            listeVilles.add(csvLine);
-	        }
-	        Files.write(pathDest, listeVilles);
+//	        Path pathDest = Paths.get("C:/code/java/ApprocheObject/recensement-new.csv");
+//	        List<String> listeVilles = new ArrayList<>();
+//	        for (Ville ville : villes) {
+//	            String toString = ville.toString(); 
+//	            listeVilles.add(toString);
+//	        }
+//	        Files.write(pathDest, listeVilles);
+	
+	
+		 
     }
 	}
 
