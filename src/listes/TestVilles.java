@@ -1,6 +1,7 @@
 package listes;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class TestVilles {
@@ -60,6 +61,18 @@ public class TestVilles {
 		System.out.println("Affichage en majuscules des villes de plus de 100000 habitants:");
 		for (Ville v: villes) {
 			System.out.println(v);
+		}
+		System.out.println("-----------");
+		Collections.sort(villes,new ComparatorHabitant());
+		for (Ville villeSortedHab : villes) {
+			
+			System.out.println(villeSortedHab);
+		}
+		System.out.println("--------");
+		Collections.sort(villes,new ComparatorNom());
+		for (Ville villeSortedHab : villes) {
+			
+			System.out.println(villeSortedHab);
 		}
 	}
 
