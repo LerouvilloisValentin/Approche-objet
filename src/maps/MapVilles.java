@@ -2,11 +2,10 @@ package maps;
 
 import java.io.IOException;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import fichier.Ville;
+
 
 public class MapVilles {
 
@@ -35,7 +34,7 @@ public class MapVilles {
 		System.out.println("Ville qui a le moins d'habitants est "+selected);
 		
 		// Suppression à partir de la clé de stockage
-		mapVilles.remove(selected.getNom());
+//		mapVilles.remove(selected.getNom());
 		
 		// Affichage des villes restantes
 		for (Ville ville : mapVilles.values()) {
