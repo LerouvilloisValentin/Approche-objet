@@ -20,7 +20,7 @@ public class TestCalendar {
 		String chaine2 = formateur2.format(d2);
 		System.out.println(chaine2);
 		Locale localeRu = new Locale("ru", "RU");
-		SimpleDateFormat formateur3 = new SimpleDateFormat("yyyy/MM/dd à HH:mm:ss", localeRu);
+		SimpleDateFormat formateur3 = new SimpleDateFormat("yyyy/MMMM/dd à HH:mm:ss", localeRu);
 		String chaine3 = formateur3.format(d2);
 		System.out.println(chaine3);
 	}
