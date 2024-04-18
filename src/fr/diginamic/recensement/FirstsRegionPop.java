@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class FirstsRegionPop {
 
@@ -17,7 +16,6 @@ public class FirstsRegionPop {
 		List<String> recensement = Files.readAllLines(path);
 
 		recensement.remove(0);
-		Scanner scanner = new Scanner(System.in);
 		HashMap<String, Integer> listRegion = new HashMap<>();
 
 		for (String ville : recensement) {
@@ -53,6 +51,6 @@ public class FirstsRegionPop {
 			count++;
 		}
 
-		scanner.close();
+
 	}
 }

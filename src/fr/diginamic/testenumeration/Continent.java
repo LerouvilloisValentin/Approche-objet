@@ -1,7 +1,8 @@
 package fr.diginamic.testenumeration;
 
 public enum Continent {
-	EUROPE("Europe", 1), ASIE("Asie", 2), AFRIQUE("Afrique", 3), AMERIQUE("AMERIQUE", 4),OCEANIE("Océanie", 5);
+	EUROPE("Europe", 1),
+	ASIE("Asie", 2), AFRIQUE("Afrique", 3), AMERIQUE("AMERIQUE", 4),OCEANIE("Océanie", 5);
 
 	private final String name;
 	private final int numeroOrdre;

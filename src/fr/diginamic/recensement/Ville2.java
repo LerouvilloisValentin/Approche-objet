@@ -1,6 +1,6 @@
 package fr.diginamic.recensement;
 
-public class Ville {
+public class Ville2 {
 	int codeRegion;
 	String nameDepartement;
 	String name;
@@ -9,7 +9,7 @@ public class Ville {
 	String nameCommune;
 	int popTot;
 
-	public Ville(int codeRegion, String name, String codeDepartment, int codeCommune, String nameCommune, int popTot,
+	public Ville2(int codeRegion, String name, String codeDepartment, int codeCommune, String nameCommune, int popTot,
 			String nameDepartement) {
 		super();
 		this.codeRegion = codeRegion;
@@ -21,20 +21,18 @@ public class Ville {
 		this.nameDepartement = nameDepartement;
 	}
 
-	public Ville(int codeRegion, String name) {
-		this.codeRegion = codeRegion;
-		this.name = name;
-	}
 
-//	public Ville(String nameDepartement, int popTop) {
-//		this.nameDepartement = nameDepartement;
-//		this.popTot = popTop;
-//	}
-
-	public Ville(String name, int popTop) {
-		this.name = name;
+	public Ville2(String nameDepartement, int popTop) {
+		this.nameDepartement = nameDepartement;
 		this.popTot = popTop;
 	}
+
+	public Ville2(String codeDepartment, String nameDepartement, int popTop) {
+		this.nameDepartement = nameDepartement;
+		this.popTot = popTop;
+		this.codeDepartment = codeDepartment;
+	}
+
 
 	@Override
 	public String toString() {
@@ -58,7 +56,7 @@ public class Ville {
 		this.name = name;
 	}
 
-	public static String getCodeDepartment(Ville ville) {
+	public static String getCodeDepartment(Ville2 ville) {
 		return ville.codeDepartment;
 	}
 

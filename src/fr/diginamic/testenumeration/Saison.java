@@ -6,13 +6,25 @@ public enum Saison {
 	private final String name;
 	private final int numeroOrdre;
 
+	/**
+	 * @param name
+	 * @param numeroOrdre
+	 */
 	private Saison(String name, int numeroOrdre) {
 		this.name = name;
 		this.numeroOrdre = numeroOrdre;
 	}
+	
+//	public static Saison obtenirSaison(String name) {
+//		for(Saison saison : values()) {
+//			if (saison.getName().equals(name)) {
+//				return saison;
+//			}
+//			return null;
+//		}
+//	}
 
-
-	public static String getName(String name) {
+	public String getName() {
 		return name;
 	}
 

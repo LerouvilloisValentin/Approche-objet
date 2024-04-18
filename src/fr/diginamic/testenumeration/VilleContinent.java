@@ -9,6 +9,11 @@ public class VilleContinent {
 	
 	
 
+	/**
+	 * @param nom
+	 * @param nbHabitants
+	 * @param continent
+	 */
 	public VilleContinent(String nom, int nbHabitants, Continent continent) {
 		super();
 		this.nom = nom;

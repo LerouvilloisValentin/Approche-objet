@@ -5,10 +5,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class PopPerDepartment {
+public class FirstsVillePop {
 
 	public static void main(String[] args) throws IOException {
 		Path path = Paths.get("C:/code/java/ApprocheObject/recensement.csv");
@@ -16,28 +17,33 @@ public class PopPerDepartment {
 
 		recensement.remove(0);
 		Scanner scanner = new Scanner(System.in);
-		int populationTotaleDepartement = 0;
+		ArrayList<Ville> listVille= new ArrayList<>();
 
-		System.out.println("Entrez le code du département pour obtenir sa population:");
+		for (String villes : recensement) {
+			String[] tokens = villes.split(";");
+			String nameVille= tokens[6];
 
-		String codeDepartementSaisie = scanner.nextLine();
-		for (String ville : recensement) {
-			String[] tokens = ville.split(";");
-
-			String codeDepartment = tokens[2];
 			String populations = tokens[9].trim().replaceAll(" ", "");
 			int populationTotal = Integer.parseInt(populations);
 
-			if (codeDepartment.equals(codeDepartementSaisie)) {
-				populationTotaleDepartement += populationTotal;
+			Ville ville = new Ville(nameVille, populationTotal);
 
-			}
+			listVille.add(ville);
+
 		}
 
-		System.out.println("La population total45e du département " + codeDepartementSaisie + " est de "
-				+ populationTotaleDepartement + " habitants");
+		Collections.sort(listVille, new ComparatorHabitant());
+
+		System.out.println("Les 10 Départements les plus peuplées :");
+		int count = 0;
+		for (Ville listVilleSorted : listVille) {
+			if (count >= 10) {
+				break;
+			}
+			System.out.println(listVilleSorted.getName()+"  "+ listVilleSorted.getPopTot());
+			count++;
+		}
 
 		scanner.close();
 	}
-
 }
