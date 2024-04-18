@@ -14,14 +14,22 @@ public class TestSetDouble {
 		arrayDouble.add(48.5);
 		arrayDouble.add(0.01);
 		
-		double smallNumber = Double.MIN_VALUE;
+		double highNumber = Double.MIN_VALUE;
 		
 		for(double num : arrayDouble) {
-			if(smallNumber < num)
+			if(highNumber < num)
+				highNumber = num;
+		}
+		System.out.println(highNumber);
+		
+	double smallNumber = Double.MIN_VALUE;
+		
+		for(double num : arrayDouble) {
+			if(smallNumber > num)
 				smallNumber = num;
 		}
-		System.out.println(smallNumber);
-		
+		arrayDouble.remove(smallNumber);
+		System.out.println(arrayDouble);
 	}
 
 }
